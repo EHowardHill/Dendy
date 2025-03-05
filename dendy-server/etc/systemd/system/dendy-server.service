@@ -1,0 +1,13 @@
+[Unit]
+Description=Dendy Server
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/etc/dendy
+ExecStart=/etc/dendy/launch.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
